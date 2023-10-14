@@ -1,0 +1,3 @@
+#ignore all file in the dataset folder
+dataset/*
+tmp/*

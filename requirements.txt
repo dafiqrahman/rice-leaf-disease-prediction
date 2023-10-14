@@ -1,0 +1,12 @@
+# Python dependencies
+numpy
+pandas
+matplotlib
+scikit-learn
+
+#image library
+tensorflow
+opencv-python
+
+#kernel dependencies
+ipykernel
