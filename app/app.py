@@ -30,7 +30,7 @@ def load_model():
     model = keras.models.load_model('mobilenetv2')
     return model
 #model = load_model()
-st.write(os.getcwd())
+st.write(os.listdir())
 # Add a selectbox to the sidebar:
 img_input = st.file_uploader("Upload Image", type=["jpg", "png"])
 
