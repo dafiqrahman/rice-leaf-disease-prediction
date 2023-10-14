@@ -3,6 +3,7 @@ import keras
 from functions.predict import predict
 from PIL import Image
 from functions.disease_desc import disease_desc
+import os
 #make it center
 st.markdown("""
 <style>
@@ -28,8 +29,8 @@ st.markdown('<h2 class="center"> Aplikasi Deteksi Penyakit pada Tanaman Padi </h
 def load_model():
     model = keras.models.load_model('mobilenetv2')
     return model
-model = load_model()
-
+#model = load_model()
+print(os.getcwd())
 # Add a selectbox to the sidebar:
 img_input = st.file_uploader("Upload Image", type=["jpg", "png"])
 
