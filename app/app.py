@@ -27,10 +27,9 @@ st.markdown('<h2 class="center"> Aplikasi Deteksi Penyakit pada Tanaman Padi </h
 
 @st.cache_resource
 def load_model():
-    model = keras.models.load_model('mobilenetv2')
+    model = keras.models.load_model('app/mobilenetv2')
     return model
-#model = load_model()
-st.write(os.listdir())
+model = load_model()
 # Add a selectbox to the sidebar:
 img_input = st.file_uploader("Upload Image", type=["jpg", "png"])
 
