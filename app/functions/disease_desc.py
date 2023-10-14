@@ -3,7 +3,7 @@ import os
 
 def disease_desc(disease):
     print(os.getcwd())
-    data = pd.read_csv('./disease_data/disease_data.csv',sep = ";")
+    data = pd.read_csv('app/disease_data/disease_data.csv',sep = ";")
     data = data[data['disease'] == disease]
     print(data.description)
     description = data['description'].values[0]
