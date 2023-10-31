@@ -1,3 +1,4 @@
 #ignore all file in the dataset folder
 dataset/*
 tmp/*
+ppt/ConvNet.gif
