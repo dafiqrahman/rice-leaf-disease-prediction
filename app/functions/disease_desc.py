@@ -14,6 +14,6 @@ def disease_desc(disease):
     solution = ''.join(solution)
     reference = data['reference'].values[0]
     reference = reference.split('|')
-    reference = [f'<li>{ref}</li>' for ref in reference]
+    reference = [f'<li><a href = {ref}> {ref}</a></li>' for ref in reference]
     reference = ''.join(reference)
     return description, solution, reference
