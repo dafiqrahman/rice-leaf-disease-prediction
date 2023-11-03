@@ -22,8 +22,14 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-logo = Image.open('app/assets/logo app.png')
-st.image(logo)
+coll1, coll2, coll3 = st.columns([1, 2, 1])
+with coll1:
+    st.write("")
+with coll2:
+    logo = Image.open('app/assets/logo app.png')
+with coll3:
+    st.write("")
+st.image(logo,)
 st.markdown('<h2 class="center"> Aplikasi Deteksi Penyakit pada Tanaman Padi </h2>',
             unsafe_allow_html=True)
 
