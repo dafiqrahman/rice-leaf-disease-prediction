@@ -57,13 +57,14 @@ if img_input is not None:
     image = Image.open(img_input)
     prediction, class_name = predict(model, image)
     st.markdown(prediction, unsafe_allow_html=True)
-    st.markdown(
-        f"<h3> <br> Deskripsi {class_name}", unsafe_allow_html=True)
-    description, solution, reference = disease_desc(class_name)
-    st.markdown(description, unsafe_allow_html=True)
-    st.markdown(
-        f"<h3> <br> Solusi", unsafe_allow_html=True)
-    st.markdown(solution, unsafe_allow_html=True)
-    st.markdown(
-        f"<h3> <br> Referensi", unsafe_allow_html=True)
-    st.markdown(reference, unsafe_allow_html=True)
+    if class_name != 'Padi Sehat':
+        st.markdown(
+            f"<h3> <br> Deskripsi {class_name}", unsafe_allow_html=True)
+        description, solution, reference = disease_desc(class_name)
+        st.markdown(description, unsafe_allow_html=True)
+        st.markdown(
+            f"<h3> <br> Solusi", unsafe_allow_html=True)
+        st.markdown(solution, unsafe_allow_html=True)
+        st.markdown(
+            f"<h3> <br> Referensi", unsafe_allow_html=True)
+        st.markdown(reference, unsafe_allow_html=True)
